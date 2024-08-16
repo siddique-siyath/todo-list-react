@@ -6,11 +6,13 @@ body {
 
 .todo-container {
   width: 350px;
-  position: absolute;
+  /* position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50% , -50%);
+  transform: translate(-50% , -50%); */
   text-align: center;
+  margin: auto;
+  margin-top: 30px;
 }
 
 h1{
@@ -56,9 +58,76 @@ ul li{
   margin-bottom: 10px;
   color: #08869e;
   box-shadow: 0 4px 6px #00000066;
+  justify-content: space-between;
 }
 
 ul li i{
   text-align: right;
   flex: 1;
+  cursor: pointer;
+  width: 20px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-inner {
+  /* background: #fff; */
+  background-color: #055565;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.dialog-input-section{
+  background-color: #055565;
+  padding: 18px;
+  border-radius: 10px;
+  /* box-shadow: 0 7px 6px #0000003b; */
+}
+
+.dialog-input-section input{
+  border-radius: 5px;
+  border: 1px solid #106879;
+  width: 100%;
+  padding: 10px;
+  /* box-sizing: border-box; */
+  background-color: #055565;
+  outline: none;
+  color: #fff;
+  margin-left: -10px;
+  /* color: #08869e; */
+}
+
+.btn{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.edit-btn{
+  width: 60px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #56cb56;
+  color: white;
+}
+
+.cancel-btn{
+  width: 60px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
 }
